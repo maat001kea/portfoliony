@@ -1,0 +1,74 @@
+h1,
+h2 {
+  text-align: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 20px;
+  padding: 20px;
+  margin-bottom: 40px; /* Space between the two grids */
+  text-align: center;
+}
+
+.grid-container2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  gap: 20px;
+  padding: 20px;
+  margin-bottom: 40px; /* Space between the two grids */
+  text-align: center;
+}
+
+.grid-item {
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.grid-item.h1 {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  grid-column: span 3; /* Make heading span across all columns */
+}
+
+.grid-item.image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.grid-item.text p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #fff;
+  line-height: 2;
+}
+
+.knap {
+  margin-top: 15%;
+}
+
+a {
+  font-size: 250%;
+  color: #fff; /* Hvid tekstfarve */
+  text-decoration: none; /* Fjern understregning */
+}
+a:hover {
+  color: rgb(3, 255, 32); /* Understregning ved hover, hvis ønsket */
+}
+
+@media (max-width: 570px) {
+  .grid-container,
+  .grid-container2 {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .grid-item.h1 {
+    grid-column: auto; /* Remove spanning on mobile */
+  }
+}

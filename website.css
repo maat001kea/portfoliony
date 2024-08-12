@@ -1,0 +1,77 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: center;
+  margin-top: 0%;
+  padding-top: 10%;
+}
+
+.pc {
+  font-size: larger;
+  margin-bottom: 5%;
+  align-content: center;
+}
+
+h1 {
+  font-size: 300%;
+  margin-bottom: 0%;
+  text-align: center;
+}
+
+.image {
+  display: flex;
+  align-items: flex-start; /* Align the image to the top of the div */
+}
+
+.image img {
+  width: 80%;
+  height: auto;
+  margin: auto;
+}
+
+.image2 {
+  padding-top: 10%;
+  width: 80%;
+  height: auto;
+  margin: auto;
+}
+
+.knap {
+  margin-top: 5%;
+}
+
+.knap-text {
+  text-align: center;
+  margin: auto;
+}
+
+@media (max-width: 570px) {
+  .main {
+    grid-template-columns: 1fr; /* Stack the image and text vertically on mobile */
+  }
+
+  .image {
+    margin-bottom: 0px; /* Add space between the image and the text */
+    text-align: center;
+  }
+
+  .text h1 {
+    font-size: 20px; /* Adjust the font size for mobile */
+  }
+
+  .text p {
+    font-size: 14px; /* Adjust the font size for mobile */
+  }
+  .image2 {
+    margin-bottom: 10%;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 10%;
+  }
+  .image img {
+    width: 100%;
+    height: auto;
+  }
+}

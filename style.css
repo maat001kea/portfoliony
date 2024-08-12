@@ -1,0 +1,247 @@
+@font-face {
+  font-family: "Unna";
+  src: url("assets/fonts/Unna-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: rgb(13, 13, 13);
+  color: white; /* Default text color */
+  margin: 0;
+  font-family: "Unna", serif;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+footer {
+  font-family: "Unna", serif;
+  font-size: large;
+  background-color: rgb(52, 50, 50); /* Footer background color */
+  color: white; /* Footer text color */
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+  bottom: 0;
+  text-transform: uppercase; /* Transforms text to uppercase */
+  font-weight: bold;
+  margin-top: 5%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Permanent Marker";
+  color: white; /* Set heading colors to white */
+}
+
+h1 {
+  font-size: 300%;
+}
+
+p {
+  font-family: "Unna", serif;
+  line-height: 1.6; /* Sets the line height to 1.6 times the font size */
+  font-size: large;
+  letter-spacing: 1.5px;
+}
+
+.permanent-marker-regular {
+  font-family: "Permanent Marker";
+  font-weight: 400;
+  font-style: normal;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+}
+
+.logo {
+  background-color: #000000; /* Dark blue background */
+  padding: 10px 10px;
+  border-radius: 4px;
+  box-shadow: 0 4px 15px rgba(12, 243, 39, 0.933);
+}
+
+.logo-text {
+  color: #ffffff; /* White text */
+  font-size: 38px; /* Adjust the size of the text */
+  font-weight: bold;
+  letter-spacing: 5px; /* Space between letters */
+  text-transform: uppercase; /* Make text uppercase */
+}
+
+.knap img {
+  width: 40px;
+  height: 40px;
+}
+
+.knap {
+  background-color: #000000; /* Dark blue background */
+  width: 50%;
+  height: auto;
+  padding: 10px 10px;
+  border-radius: 7px;
+  box-shadow: 0 4px 15px rgba(12, 243, 39, 0.933);
+  text-align: center;
+  margin: auto;
+}
+
+.knap-text {
+  color: #ffffff; /* White text */
+  font-size: 38px; /* Adjust the size of the text */
+  font-weight: bold;
+  letter-spacing: 5px; /* Space between letters */
+  text-transform: uppercase; /* Make text uppercase */
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.menu a {
+  font-family: "Unna", serif;
+  font-size: x-large;
+  display: block;
+  text-align: center;
+  padding: 10px;
+  color: white; /* Changed link color */
+  text-decoration: none;
+  transition: color 0.3s;
+  font-weight: bold;
+}
+
+.menu a:hover {
+  color: rgb(15, 197, 9); /* Red hover effect */
+}
+
+.burger {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  display: none; /* Hidden by default, shown in media query */
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.burger .line {
+  width: 100%;
+  height: 2px;
+  background-color: white; /* Changed line color */
+  transition: 0.2s linear;
+}
+
+img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  box-shadow: 0 0 20px 10px rgba(0, 255, 0, 0.8); /* Green glowing effect */
+}
+
+a {
+  font-size: 250%;
+  color: #fff; /* Hvid tekstfarve */
+  text-decoration: none; /* Fjern understregning */
+}
+a:hover {
+  color: rgb(3, 255, 32); /* Understregning ved hover, hvis ønsket */
+}
+
+@media screen and (max-width: 800px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: black; /* Ensure the menu background is black */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+
+  .menu li {
+    margin: 10px 20px;
+  }
+
+  .menu a {
+    font-size: 24px;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  nav.active .menu {
+    display: flex;
+  }
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.omspil {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 5%; /* Margin between the items */
+  margin: 5%;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+}
+
+@media screen and (max-width: 570px) {
+  .image-container {
+    margin-bottom: 5%; /* Add space below the image */
+  }
+
+  .description {
+    margin: 5%; /* Ensure a margin of 5% */
+  }
+}

@@ -1,0 +1,40 @@
+.container {
+  margin-top: 10%;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 20px;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.image-container {
+  margin-top: 0%;
+  margin: auto;
+  padding: 0px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  height: auto;
+  padding-top: 10%;
+}
+
+.beskrivelse {
+  margin-top: 10%;
+}
+
+@media (max-width: 570px) {
+  .beskrivelse {
+    margin-top: 0%;
+  }
+  .container {
+    margin-top: 5%;
+    grid-template-columns: 1fr; /* Stack the grids vertically on mobile */
+  }
+  .image-container {
+    padding-top: 5%;
+    margin-top: 0%;
+    margin: auto;
+    padding: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+}

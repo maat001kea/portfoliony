@@ -1,0 +1,80 @@
+.omspil {
+  font-size: larger;
+  margin-bottom: 5%;
+  text-align: center;
+  align-content: center;
+}
+
+h1 {
+  font-size: 400%;
+  margin-bottom: 0%;
+  align-content: center;
+  text-align: center;
+  margin-top: 5%;
+}
+
+h2 {
+  text-align: center;
+  font-size: 250%;
+}
+
+.ninjaimage {
+  margin-top: 4%;
+}
+
+.video-container {
+  position: relative;
+  margin: 0%;
+  width: 100%;
+  padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+  overflow: hidden;
+  box-shadow: 0 0 20px 10px rgba(0, 255, 0, 0.8); /* Green glowing effect */
+  margin-bottom: 36%;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 80%;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding-top: 5%;
+  gap: 60px;
+  margin: auto;
+}
+
+@media (max-width: 570px) {
+  .main {
+    grid-template-columns: 1fr; /* Stack the image and text vertically on mobile */
+  }
+
+  .image {
+    margin-bottom: 0px; /* Add space between the image and the text */
+  }
+
+  .text h1 {
+    font-size: 20px; /* Adjust the font size for mobile */
+  }
+
+  .text p {
+    font-size: 14px; /* Adjust the font size for mobile */
+  }
+
+  .grid2,
+  .omspil {
+    grid-template-columns: 1fr;
+    margin-top: 0%;
+  }
+
+  .video-container {
+    margin-bottom: 0%;
+  }
+}
